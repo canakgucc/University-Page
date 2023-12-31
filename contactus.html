@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Marpad University</title>
+</head>
+
+<body>
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <img src="logo.png" alt="LOGO">
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="page.html" class="link">Home</a></li>
+                <li><a href="admissions.html" class="link">Admissions</a></li>
+                <li><a href="contactus.html" class="link active">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+        </div>
+        
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <div class="cont33">
+   
+    <div class="form-cont">
+     <h2>To contact us;</h2>
+        <form action="mailto:youremail@example.com" method="post" enctype="text/plain" class="email-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" cols="30" required></textarea><br><br>
+            
+            <input type="submit" value="Send">
+        </form>
+    </div>
+    
+    <div class="iframe-cont">
+        <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3013.3528703668994!2d29.389542376852805!3d40.951847971358575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cad7b50f100fcb%3A0x4bfe6a3dfc7c6a76!2s%C4%B0stanbul%20Okan%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1703066216621!5m2!1str!2str"
+    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </div>
+    
+</div>   
+
+
+<script>
+   
+   function myMenuFunction() {
+    var i = document.getElementById("navMenu");
+
+    if(i.className === "nav-menu") {
+        i.className += " responsive";
+    } else {
+        i.className = "nav-menu";
+    }
+   }
+ 
+</script>
+
+<script>
+    function login() {
+      window.location.href = "index.html";
+    }
+</script>
+
+<script>
+    function register() {
+        window.location.href = "index.html"
+    }
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+     let currentLocation = location.pathname;
+     let links = document.querySelectorAll('.link');
+     
+     links.forEach(function(link) {
+         if (link.getAttribute('href') === currentLocation) {
+             link.classList.add('active');
+         }
+     });
+ });
+ 
+ 
+</script>
+
+</body>
+</html>

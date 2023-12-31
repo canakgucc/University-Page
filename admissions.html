@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Marpad University</title>
+</head>
+
+<body>
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <img src="logo.png" alt="LOGO">
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="page.html" class="link">Home</a></li>
+                <li><a href="admissions.html" class="link active">Admissions</a></li>
+                <li><a href="contactus.html" class="link">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+        </div>
+        
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+    
+    <div class="table-container">
+        <h2 class="baslik">To learn more about the admissions in our University;</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Michael Bright</td>
+              <td>macbright@marpad.edu.us</td>
+              <td>Admissions Officer</td>
+            </tr>
+            <tr>
+              <td>Renee Wilson</td>
+              <td>reneewilson@marpad.edu.us</td>
+              <td>Application Reviewer</td>
+            </tr>
+            <tr>
+              <td>Tyree Jones</td>
+              <td>tyreejones@marpad.edu.us</td>
+              <td>Student Recruiter</td>
+            </tr>
+            <tr>
+              <td>Lucy Gretha</td>
+              <td>lucygretha@marpad.edu.usm</td>
+              <td>Financial Aid Advisor</td>
+            </tr>
+            <tr>
+              <td>Justin Weyblack</td>
+              <td>jweyblack@marpad.edu.us</td>
+              <td>Registrar</td>
+            </tr>
+            <tr>
+              <td>Sarah Clark</td>
+              <td>sarahclark@marpad.edu.us</td>
+              <td>Admissions Coordinator</td>
+            </tr>
+            <tr>
+              <td>Emily Davis</td>
+              <td>emilydavis@marpad.edu.us</td>
+              <td>International Admissions Officer</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>     
+</div>   
+
+
+<script>
+   
+   function myMenuFunction() {
+    var i = document.getElementById("navMenu");
+
+    if(i.className === "nav-menu") {
+        i.className += " responsive";
+    } else {
+        i.className = "nav-menu";
+    }
+   }
+ 
+</script>
+
+<script>
+    function login() {
+      window.location.href = "index.html";
+    }
+</script>
+
+<script>
+    function register() {
+        window.location.href = "index.html"
+    }
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+     let currentLocation = location.pathname;
+     let links = document.querySelectorAll('.link');
+     
+     links.forEach(function(link) {
+         if (link.getAttribute('href') === currentLocation) {
+             link.classList.add('active');
+         }
+     });
+ });
+ 
+ 
+</script>
+
+</body>
+</html>
